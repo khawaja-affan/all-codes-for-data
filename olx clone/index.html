@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLX Pakistan Classifieds</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+      <img src="./download.png" alt="OLX Logo" class="logo">
+      <h1>OLX Pakistan Classifieds</h1>
+    </header>
+    <section class="categories">
+  <button class="category" data-category="cars">
+    <i class="fas fa-car"></i>
+    <span>Cars</span>
+  </button>
+  <button class="category" data-category="mobiles">
+    <i class="fas fa-mobile-alt"></i>
+    <span>Mobiles</span>
+  </button>
+  <button class="category" data-category="property">
+    <i class="fas fa-home"></i>
+    <span>Property</span>
+  </button>
+  <button class="category" data-category="electronics">
+    <i class="fas fa-laptop"></i>
+    <span>Electronics</span>
+  </button>
+  <button class="category" data-category="furniture">
+    <i class="fas fa-chair"></i>
+    <span>Furniture</span>
+  </button>
+  <button class="category" data-category="bikes">
+    <i class="fas fa-motorcycle"></i>
+    <span>Bikes</span>
+  </button>
+  <button class="category" data-category="all">
+  <i class="fas fa-th"></i>
+  <span>All</span>
+</button>
+<section class="featured">
+  <div class="item" data-category="cars">
+    <img src="./543388196-800x600.webp" alt="Used Honda Civic">
+    <div class="info">
+      <h3>Used Honda Civic</h3>
+      <p>Rs. 2,000,000</p>
+    </div>
+  </div>
+
+ <div class="item" data-category="furniture">
+    <img src="./download (1).jpeg" alt="furniture">
+    <div class="info">
+      <h3>dining table</h3>
+      <p>Rs. 72,000</p>
+    </div>
+  </div>
+
+   <div class="item" data-category="furniture">
+    <img src="./download (2).jpeg" alt="furniture">
+    <div class="info">
+      <h3>woden chair</h3>
+      <p>Rs. 14,500</p>
+    </div>
+  </div>
+
+  <div class="item" data-category="mobiles">
+    <img src="./541722984-800x600.webp" alt="iPhone 13 Pro">
+    <div class="info">
+      <h3>iPhone 13 Pro</h3>
+      <p>Rs. 350,000</p>
+    </div>
+  </div>
+
+  <div class="item" data-category="property">
+    <img src="./537237008-800x600.webp" alt="2 Bed Apartment">
+    <div class="info">
+      <h3>2 Bed Apartment</h3>
+      <p>Rs. 12,000,000</p>
+    </div>
+  </div>
+
+  <div class="item" data-category="electronics">
+    <img src="./544263183-800x600.webp" alt="Laptop">
+    <div class="info">
+      <h3>Laptop</h3>
+      <p>Rs. 280,000</p>
+    </div>
+  </div>
+
+  <div class="item" data-category="bikes">
+    <img src="./544107782-800x600.webp" alt="150cc YBR">
+    <div class="info">
+      <h3>150cc YBR</h3>
+      <p>Rs. 2,000,000</p>
+    </div>
+    </div>
+
+  <div class="item" data-category="electronics">
+    <img src="./download.jpeg" alt="Dell Computer">
+    <div class="info">
+      <h3>Dell Computer</h3>
+      <p>Rs. 20,000</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const categoryButtons = document.querySelectorAll('.category');
+  const items = document.querySelectorAll('.item');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedCategory = button.getAttribute('data-category');
+
+      items.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (itemCategory === selectedCategory) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>

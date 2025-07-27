@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .question { margin-bottom: 20px; }
+    .correct { color: green; }
+    .incorrect { color: red; }
+    .result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Quiz</h1>
+  <form id="quizForm">
+
+    <div class="question">
+      <p>1. What does alert("Welcome to JavaScript!") do?</p>
+      <label><input type="radio" name="q1" value="c"> Shows a pop-up message</label><br>
+      <label><input type="radio" name="q1" value="a"> Asks for user input</label><br>
+      <label><input type="radio" name="q1" value="b"> Logs a message in the console</label><br>
+    </div>
+
+    <div class="question">
+      <p>2. Which is a valid string variable declaration?</p>
+      <label><input type="radio" name="q2" value="b"> let name = "John";</label><br>
+      <label><input type="radio" name="q2" value="a"> let name = John;</label><br>
+      <label><input type="radio" name="q2" value="c"> string name = "John";</label><br>
+    </div>
+
+    <!-- Add more questions here using same structure -->
+    
+    <!-- To keep this short, I'll include just 5 sample questions. Want all 20 added? Let me know! -->
+
+    <div class="question">
+      <p>3. True or False: let age = 25; is valid?</p>
+      <label><input type="radio" name="q3" value="true"> True</label><br>
+      <label><input type="radio" name="q3" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>4. Which of the following is an illegal variable name?</p>
+      <label><input type="radio" name="q4" value="c"> 123user</label><br>
+      <label><input type="radio" name="q4" value="a"> userName</label><br>
+      <label><input type="radio" name="q4" value="d"> user_name</label><br>
+    </div>
+
+    <div class="question">
+      <p>5. What is 5 + 3 * 2?</p>
+      <label><input type="radio" name="q5" value="b"> 11</label><br>
+      <label><input type="radio" name="q5" value="a"> 16</label><br>
+      <label><input type="radio" name="q5" value="c"> 13</label><br>
+    </div>
+
+    <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const correctAnswers = {
+      q1: "c",
+      q2: "b",
+      q3: "true",
+      q4: "c",
+      q5: "b"
+    };
+
+    function submitQuiz() {
+      const form = document.forms.quizForm;
+      let score = 0;
+      let total = Object.keys(correctAnswers).length;
+
+      for (let q in correctAnswers) {
+        const selected = form[q].value;
+        const questionElement = form[q][0].closest('.question');
+
+        if (selected === correctAnswers[q]) {
+          questionElement.classList.add("correct");
+          questionElement.classList.remove("incorrect");
+          score++;
+        } else {
+          questionElement.classList.add("incorrect");
+          questionElement.classList.remove("correct");
+        }
+      }
+
+      document.getElementById("result").textContent = `You got ${score} out of ${total} correct.`;
+    }
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    .question { margin-bottom: 20px; padding: 10px; background: #fff; border-radius: 5px; }
+    .correct { border-left: 5px solid green; }
+    .incorrect { border-left: 5px solid red; }
+    .result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Quiz</h1>
+  <form id="quizForm">
+
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. What does alert("Welcome to JavaScript!") do?</p>
+      <label><input type="radio" name="q1" value="c"> Shows a pop-up message</label><br>
+      <label><input type="radio" name="q1" value="a"> Asks for user input</label><br>
+      <label><input type="radio" name="q1" value="b"> Logs a message in the console</label><br>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. Which is a valid string variable declaration?</p>
+      <label><input type="radio" name="q2" value="b"> let name = "John";</label><br>
+      <label><input type="radio" name="q2" value="a"> let name = John;</label><br>
+      <label><input type="radio" name="q2" value="c"> string name = "John";</label><br>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <p>3. True or False: let age = 25; is valid?</p>
+      <label><input type="radio" name="q3" value="true"> True</label><br>
+      <label><input type="radio" name="q3" value="false"> False</label><br>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <p>4. Which of the following is an illegal variable name?</p>
+      <label><input type="radio" name="q4" value="c"> 123user</label><br>
+      <label><input type="radio" name="q4" value="a"> userName</label><br>
+      <label><input type="radio" name="q4" value="d"> user_name</label><br>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <p>5. What is 5 + 3 * 2?</p>
+      <label><input type="radio" name="q5" value="b"> 11</label><br>
+      <label><input type="radio" name="q5" value="a"> 16</label><br>
+      <label><input type="radio" name="q5" value="c"> 13</label><br>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+      <p>6. What is the result of 10 % 3?</p>
+      <label><input type="radio" name="q6" value="a"> 1</label><br>
+      <label><input type="radio" name="q6" value="b"> 3</label><br>
+      <label><input type="radio" name="q6" value="c"> 0</label><br>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <p>7. Which expression ensures addition happens before multiplication?</p>
+      <label><input type="radio" name="q7" value="b">(5 + 3) * 2</label><br>
+      <label><input type="radio" name="q7" value="a">5 + 3 * 2</label><br>
+      <label><input type="radio" name="q7" value="c">5 + (3 * 2)</label><br>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <p>8. What is the result of "Hello, " + "World!"?</p>
+      <label><input type="radio" name="q8" value="b"> "Hello, World!"</label><br>
+      <label><input type="radio" name="q8" value="a"> "Hello World!"</label><br>
+      <label><input type="radio" name="q8" value="c"> Hello + World!</label><br>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <p>9. What does prompt("Enter your name:") do?</p>
+      <label><input type="radio" name="q9" value="c"> Opens a pop-up to get user input</label><br>
+      <label><input type="radio" name="q9" value="a"> Displays a console message</label><br>
+      <label><input type="radio" name="q9" value="b"> Shows an alert</label><br>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <p>10. Fill in the blank: if (age > 18) { _______("You are an adult"); }</p>
+      <label><input type="radio" name="q10" value="b"> alert</label><br>
+      <label><input type="radio" name="q10" value="a"> return</label><br>
+      <label><input type="radio" name="q10" value="c"> break</label><br>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+      <p>11. Which of these is a strict equality operator?</p>
+      <label><input type="radio" name="q11" value="c"> ===</label><br>
+      <label><input type="radio" name="q11" value="b"> ==</label><br>
+      <label><input type="radio" name="q11" value="a"> =</label><br>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+      <p>12. What is the purpose of else if in an if statement?</p>
+      <label><input type="radio" name="q12" value="b"> To check another condition if the first one is false</label><br>
+      <label><input type="radio" name="q12" value="a"> To end a program</label><br>
+      <label><input type="radio" name="q12" value="c"> To loop a statement</label><br>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+      <p>13. True or False: The && operator checks if both conditions are true.</p>
+      <label><input type="radio" name="q13" value="true"> True</label><br>
+      <label><input type="radio" name="q13" value="false"> False</label><br>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+      <p>14. What will this code output?<br> if (x = 10, y = 5) { if (x > 5 && y </p>) { console.log("Nested conditions are true"); } }</p>
+      <label><input type="radio" name="q14" value="c"> "Nested conditions are true"</label><br>
+      <label><input type="radio" name="q14" value="a"> Nothing</label><br>
+      <label><input type="radio" name="q14" value="b"> Error</label><br>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+      <p>15. How do you declare an array with values 1, 2, and 3?</p>
+      <label><input type="radio" name="q15" value="a"> let arr = [1, 2, 3];</label><br>
+      <label><input type="radio" name="q15" value="b"> let arr = (1, 2, 3);</label><br>
+      <label><input type="radio" name="q15" value="c"> let arr = "1, 2, 3";</label><br>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question">
+      <p>16. Which method adds an element to the end of an array?</p>
+      <label><input type
+        button="submitQuiz"
