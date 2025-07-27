@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    color: rgb(245, 245, 245);
+    background-color:  rgb(0, 0, 0);
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wwaa{
+    line-height: 3.5rem;
+    background-color: black;
+    color:  rgb(187, 129, 22);
+    font-size: 2rem;
+    /* padding: 50px 20px; */
+    word-spacing: 10px;
+    letter-spacing: px;
+    line-height: 1.2;
+    text-align: center;
+}
+header{ padding: 50px 50px;
+    border: solid rgb(0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 0px 20px rgb(187, 129, 22);
+    margin: 10px;
+    margin-bottom: 30px;
+    width: 900px;
+    height: 300px;
+    position: relative;
+    left: 160px;
+}
+#FirstName{
+    position: relative;
+    left: 300px;
+}
+#LastName{
+    position: relative;
+    left: 300px;
+}
+#Next{
+    position: relative;
+    left: 375px;
+}
+.Input{
+    color: rgb(0, 0, 0);
+    background-color: rgb(187, 129, 22);
+    padding: 90px 50px;
+    border: solid white;
+    border-radius: 30px;
+    box-shadow: 0 0px 20px rgb(187, 129, 22);
+    margin: 10px;
+    width: 900px;
+    position: relative;
+    left: 165px;
+}
+input[type="text"]{
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #000000;
+}
+input[type="text"]:hover{
+    border-color: #ffcc00;
+    box-shadow: 0 4px 10px #ffcc00;
+    background-color: #020202;
+}
+button{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(0, 0%, 0%);
+    background-color: #ff9900;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    left: 100px;
+}
+button:hover {
+    background-color: #cc7a00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

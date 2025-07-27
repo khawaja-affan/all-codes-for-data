@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PakistanPedia – History</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #006400;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar .flag {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .topbar h1 {
+      font-size: 1.8em;
+    }
+
+    .navbar {
+      background: #004d00;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    .navbar ul li a.active,
+    .navbar ul li a:hover {
+      background: white;
+      color: #004d00;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 100%;
+      max-width: 250px;
+      padding: 15px;
+      background: #e8f5e9;
+      border-right: 2px solid #ccc;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #006400;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .content h2 {
+      color: #006400;
+      margin-bottom: 15px;
+    }
+
+    .content h3 {
+      margin-top: 20px;
+      color: #004d00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #006400;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <img src="flag.jpg" alt="Flag" class="flag" />
+      <h1>PakistanPedia</h1>
+    </div>
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="history.html">History</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="culture.html">Culture</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+</nav>
+      <ul>
+  <li>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#founding">Founding</a></li>
+        <li><a href="#wars">Wars</a></li>
+        <li><a href="#present">Today</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2>History of Pakistan</h2>
+
+      <h3 id="founding">1947 – Founding of Pakistan</h3>
+      <p>Pakistan was founded on <strong>14 August 1947</strong> under the leadership of <strong>Quaid-e-Azam Muhammad Ali Jinnah</strong>. It emerged as a separate homeland for Muslims after the partition of British India.</p>
+
+      <h3 id="wars">Major Wars with India</h3>
+      <ul>
+        <li><strong>1948</strong> – First war over Kashmir</li>
+        <li><strong>1965</strong> – Full-scale war, ended in ceasefire</li>
+        <li><strong>1971</strong> – Resulted in Bangladesh’s independence</li>
+        <li><strong>1999</strong> – Kargil conflict</li>
+      </ul>
+
+      <h3 id="present">Present-Day Pakistan</h3>
+      <p>Today, Pakistan is a <strong>nuclear power</strong> with significant strategic importance. Despite political and economic challenges, the country is progressing in technology, defense, and education sectors.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PakistanPedia | Created by Affan Khurram</p>
+  </footer>
+</body>
+</html>

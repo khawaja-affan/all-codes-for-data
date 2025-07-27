@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PakistanPedia – Geography</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background: #006400;
+      color: white;
+      padding: 15px 20px;
+    }
+    header h1 {
+      margin: 0;
+      display: inline-block;
+    }
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      background: #004d00;
+      display: flex;
+      margin: 0;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: white;
+      color: #004d00;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 100%;
+      max-width: 250px;
+      background: #e8f5e9;
+      padding: 15px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: white;
+      border-left: 1px solid #ccc;
+    }
+    h2 {
+      color: #006400;
+    }
+    footer {
+      text-align: center;
+      background: #006400;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .content {
+        border-left: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PakistanPedia</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="geography.html" class="active">Geography</a></li>
+      <li><a href="culture.html">Culture</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#regions">Regions</a></li>
+        <li><a href="#climate">Climate</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Geography of Pakistan</h2>
+
+      <h3 id="location">Location</h3>
+      <p>Pakistan is located in South Asia, bordered by India to the east, Afghanistan and Iran to the west, China to the north, and the Arabian Sea to the south.</p>
+
+      <h3 id="regions">Regions</h3>
+      <p>Pakistan has four main provinces: Punjab, Sindh, Khyber Pakhtunkhwa, and Balochistan. It also includes Azad Kashmir and Gilgit-Baltistan.</p>
+
+      <h3 id="climate">Climate</h3>
+      <p>The country has a diverse climate – arid in the south, temperate in the north, and alpine in the mountainous regions. Summers are hot and winters are cold, especially in the north.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PakistanPedia | Created by Affan Khurram</p>
+  </footer>
+
+</body>
+</html>
